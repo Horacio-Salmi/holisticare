@@ -39,7 +39,7 @@ export function AddModelo(){
                   className="form-control" 
                   placeholder="Nombre del fabricante"
                   />
-                  <label for="floatingInput">Nombre del Modelo</label>
+                  <label htmlFor="floatingInput">Nombre del Modelo</label>
                 </div>
                 <div className="form-floating">
                   

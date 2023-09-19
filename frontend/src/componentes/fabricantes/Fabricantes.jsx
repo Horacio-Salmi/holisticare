@@ -147,7 +147,7 @@ export function Fabricantes(){
                     className="form-control" 
                     placeholder="Nombre del fabricante"
                     />
-                    <label for="floatingInput">Nombre del fabricante</label>
+                    <label htmlFor="floatingInput">Nombre del fabricante</label>
                     </div>
                 </div>
                 <div class="modal-footer">

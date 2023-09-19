@@ -33,7 +33,7 @@ const guardarFabricante = async(event)=>{
                   className="form-control" 
                   placeholder="Nombre del fabricante"
                   />
-                  <label for="floatingInput">Nombre del Fabricante</label>
+                  <label htmlFor="floatingInput">Nombre del Fabricante</label>
                 </div>
                
                

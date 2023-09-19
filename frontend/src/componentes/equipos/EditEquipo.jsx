@@ -63,7 +63,7 @@ export function EditEquipo(){
                   className="form-control" 
                   placeholder="Nombre del equipo"
                   />
-                  <label for="floatingInput">Nombre del Equipo</label>
+                  <label htmlFor="floatingInput">Nombre del Equipo</label>
                 </div>
                 <div className="form-floating">
                   <input 
@@ -73,7 +73,7 @@ export function EditEquipo(){
                   className="form-control" 
                   placeholder="Serial"
                   />
-                  <label for="floatingInput">Serial</label>
+                  <label htmlFor="floatingInput">Serial</label>
                 </div>
                 <div className="form-floating">
                   
@@ -83,7 +83,7 @@ export function EditEquipo(){
                     <option selected={(m.id_modelo==id_modelo)?`selected`:``} value={m.id_modelo}>{m.nombre}-{m.fabricante}</option>
                     ))}
                  </select>
-                 <label for="floatingInput">Modelo</label>
+                 <label htmlFor="floatingInput">Modelo</label>
                 </div>
                 <div className="form-floating">
                   
@@ -93,7 +93,7 @@ export function EditEquipo(){
                     <option selected={(te.id_tipo_equipo==id_tipo_equipo)?`selected`:``} value={te.id_tipo_equipo}>{te.nombre}</option>
                     ))}
                  </select>
-                 <label for="floatingInput">Tipo de Equipo</label>
+                 <label htmlFor="floatingInput">Tipo de Equipo</label>
                 </div>  
                 <div className="form-floating">
                   
@@ -103,7 +103,7 @@ export function EditEquipo(){
                     <option selected={(u.id_ubicacion==id_ubicacion)?`selected`:``} value={u.id_ubicacion}>{u.nombre}</option>
                     ))}
                  </select>
-                 <label for="floatingInput">Ubicacion</label>
+                 <label htmlFor="floatingInput">Ubicacion</label>
                 </div>  
                
                 <button className="btn btn-primary" type="submit" >Guardar Edicion</button>

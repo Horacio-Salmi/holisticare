@@ -43,7 +43,7 @@ export function Registro(){
                   className="form-control" 
                   id="apellido" 
                   />
-                  <label for="apellido">Apellido</label>
+                  <label htmlFor="apellido">Apellido</label>
                 </div>
                 <div className="form-floating">
                   <input 
@@ -53,7 +53,7 @@ export function Registro(){
                   className="form-control" 
                   id="nombre" 
                   />
-                  <label for="nombre">Nombre</label>
+                  <label htmlFor="nombre">Nombre</label>
                 </div>
 
                 <div className="form-floating">
@@ -64,7 +64,7 @@ export function Registro(){
                   className="form-control" 
                   id="dni" 
                   />
-                  <label for="dni">DNI</label>
+                  <label htmlFor="dni">DNI</label>
                 </div>
                 <div className="form-floating">
                 <input 
@@ -74,7 +74,7 @@ export function Registro(){
                   className="form-control" 
                   id="correo" 
                   />
-                  <label for="correo">Correo</label>
+                  <label htmlFor="correo">Correo</label>
                 </div>
                 <div className="form-floating">
                   <input 
@@ -84,7 +84,7 @@ export function Registro(){
                   className="form-control" 
                   id="user" 
                   />
-                  <label for="usuario">Usuario</label>
+                  <label htmlFor="usuario">Usuario</label>
                 </div>
                 <div className="form-floating">
                   <input 
@@ -94,7 +94,7 @@ export function Registro(){
                   className="form-control" 
                   id="pass" 
                   />
-                  <label for="password">Password</label>
+                  <label htmlFor="password">Password</label>
                 </div>
                 <button className="btn btn-primary" type="submit" >Registrarme</button>
                 <p className="mt-5 mb-3 text-body-secondary letra_roja"> En el caso de tener cuenta <Link to="/login">Ingresar</Link></p>

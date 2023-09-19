@@ -15,9 +15,10 @@ router.get('/', (req , res)=>{
 
 // registro de usuarios
 router.post('/registro', bodyParser.json() , (req , res)=>{
-    const {apellido, nombre , dni, user, pass, correo, id_rol} =req.body;
+    
+    const {apellido, nombre , dni, user, pass, correo, id_rol} = req.body;
     //
-    //console.log(req.body)
+    // console.log(req.body)
     let hash= bcrypt.hashSync(pass, 10);
     //
     if(!dni){
@@ -41,7 +42,10 @@ router.post('/registro', bodyParser.json() , (req , res)=>{
             }else{
                 mysqlConnect.query('INSERT INTO usuarios (apellido, nombre, dni, user, pass, correo, id_rol ) VALUES (?,?,?,?,?,?,?)', [apellido, nombre, dni, user, hash, correo, id_rol ], (error, registros)=>{
                     if(error){
-                        console.log('Error en la base de datos al momento de insertar ----> ', error)
+                        res.json({
+                            status:false,
+                            mensaje: "Error al ejecutar la consulta: ", error
+                        })
                     }else{
                         res.json({
                             status:true,

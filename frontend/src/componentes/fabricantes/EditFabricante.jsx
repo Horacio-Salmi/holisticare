@@ -45,7 +45,7 @@ const editarFabricante = async(event)=>{
                   className="form-control" 
                   placeholder="Nombre del fabricante"
                   />
-                  <label for="floatingInput">Datos del Fabricante</label>
+                  <label htmlFor="floatingInput">Datos del Fabricante</label>
                 </div>
                
                

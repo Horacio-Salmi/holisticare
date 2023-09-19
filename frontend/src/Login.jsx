@@ -26,7 +26,7 @@ const ingresar = async(event)=>{
           <main className="form-signin w-100 m-auto">
               <form onSubmit={ingresar}>
                   <a href="https://vitejs.dev" target="_blank">
-                    <img src={viteLogo} classNameName="logo" alt="Vite logo" />
+                    <img src={viteLogo} className="logo" alt="Vite logo" />
                   </a>
                 <h1 className="h3 mb-3 fw-normal">Por favor ingresar</h1>
                 
@@ -39,7 +39,7 @@ const ingresar = async(event)=>{
                   id="floatingInput" 
                   placeholder="jose@gmail.com"
                   />
-                  <label for="floatingInput">Usuario</label>
+                  <label htmlFor="floatingInput">Usuario</label>
                 </div>
                 <div className="form-floating">
                   <input 
@@ -50,7 +50,7 @@ const ingresar = async(event)=>{
                   id="floatingPassword" 
                   placeholder="Password"
                   />
-                  <label for="floatingPassword">Contraseña</label>
+                  <label htmlFor="floatingPassword">Contraseña</label>
                 </div>
                
                 <button className="btn btn-primary" type="submit" >Ingresar</button>

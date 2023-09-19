@@ -24,7 +24,7 @@ CREATE TABLE `equipos` (
 	`id_tipo_equipo` Int( 11 ) NOT NULL,
 	`id_modelo` Int( 11 ) NULL,
 	`estado` Enum( 'A', 'B', 'C' ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-	`serial` VarChar( 45 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+	`serial` VarChar( 255 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
 	`id_ubicacion` Int( 11 ) NULL,
 	PRIMARY KEY ( `id_equipo` ) )
 CHARACTER SET = latin1
@@ -37,7 +37,7 @@ AUTO_INCREMENT = 10;
 -- CREATE TABLE "fabricantes" ----------------------------------
 CREATE TABLE `fabricantes` ( 
 	`id_fabricante` Int( 11 ) AUTO_INCREMENT NOT NULL,
-	`nombre` VarChar( 45 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+	`nombre` VarChar( 255 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
 	`estado` Enum( 'A', 'B' ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'A',
 	PRIMARY KEY ( `id_fabricante` ) )
 CHARACTER SET = latin1
@@ -50,8 +50,8 @@ AUTO_INCREMENT = 5;
 -- CREATE TABLE "menu" -----------------------------------------
 CREATE TABLE `menu` ( 
 	`id_menu` Int( 11 ) AUTO_INCREMENT NOT NULL,
-	`nombre` VarChar( 45 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-	`href` VarChar( 45 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+	`nombre` VarChar( 255 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+	`href` VarChar( 255 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
 	`id_rol` Int( 11 ) NOT NULL,
 	PRIMARY KEY ( `id_menu` ) )
 CHARACTER SET = latin1
@@ -64,7 +64,7 @@ AUTO_INCREMENT = 7;
 -- CREATE TABLE "modelos" --------------------------------------
 CREATE TABLE `modelos` ( 
 	`id_modelo` Int( 11 ) AUTO_INCREMENT NOT NULL,
-	`nombre` VarChar( 45 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+	`nombre` VarChar( 255 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
 	`id_fabricante` Int( 11 ) NOT NULL,
 	PRIMARY KEY ( `id_modelo` ) )
 CHARACTER SET = latin1
@@ -77,7 +77,7 @@ AUTO_INCREMENT = 9;
 -- CREATE TABLE "roles" ----------------------------------------
 CREATE TABLE `roles` ( 
 	`id_rol` Int( 11 ) AUTO_INCREMENT NOT NULL,
-	`nombre` VarChar( 45 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+	`nombre` VarChar( 255 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
 	`estado` Enum( 'A', 'B' ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'A',
 	PRIMARY KEY ( `id_rol` ) )
 CHARACTER SET = latin1
@@ -90,7 +90,7 @@ AUTO_INCREMENT = 4;
 -- CREATE TABLE "tipos_equipo" ---------------------------------
 CREATE TABLE `tipos_equipo` ( 
 	`id_tipo_equipo` Int( 11 ) AUTO_INCREMENT NOT NULL,
-	`nombre` VarChar( 45 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+	`nombre` VarChar( 255 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
 	`estado` Enum( 'A', 'B' ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'A',
 	PRIMARY KEY ( `id_tipo_equipo` ) )
 CHARACTER SET = latin1
@@ -103,7 +103,7 @@ AUTO_INCREMENT = 6;
 -- CREATE TABLE "ubicaciones" ----------------------------------
 CREATE TABLE `ubicaciones` ( 
 	`id_ubicacion` Int( 11 ) AUTO_INCREMENT NOT NULL,
-	`nombre` VarChar( 45 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+	`nombre` VarChar( 255 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
 	`estado` Enum( 'A', 'B' ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'A',
 	PRIMARY KEY ( `id_ubicacion` ) )
 CHARACTER SET = latin1
@@ -116,12 +116,12 @@ AUTO_INCREMENT = 5;
 -- CREATE TABLE "usuarios" -------------------------------------
 CREATE TABLE `usuarios` ( 
 	`id_usuario` Int( 11 ) AUTO_INCREMENT NOT NULL,
-	`nombre` VarChar( 45 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-	`apellido` VarChar( 45 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+	`nombre` VarChar( 255 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+	`apellido` VarChar( 255 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
 	`dni` Int( 11 ) NULL,
-	`user` VarChar( 45 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-	`pass` VarChar( 45 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-	`correo` VarChar( 45 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+	`user` VarChar( 255 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+	`pass` VarChar( 255 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+	`correo` VarChar( 255 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
 	`id_rol` Int( 11 ) NOT NULL,
 	`estado` Enum( 'A', 'B' ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT 'A',
 	PRIMARY KEY ( `id_usuario` ) )
